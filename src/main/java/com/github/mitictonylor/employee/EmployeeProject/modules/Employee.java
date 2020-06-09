@@ -1,4 +1,4 @@
-package com.github.mitictonylor.employee.EmployeeProject;
+package com.github.mitictonylor.employee.EmployeeProject.modules;
 
 import javax.persistence.*;
 

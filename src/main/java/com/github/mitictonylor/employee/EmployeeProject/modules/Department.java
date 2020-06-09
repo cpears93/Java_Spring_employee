@@ -1,5 +1,7 @@
 package com.github.mitictonylor.employee.EmployeeProject.modules;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +17,7 @@ public class Department {
     @Column
     private String name;
 
+    @JsonIgnoreProperties("department")
     @OneToMany(mappedBy = "department")
     private List<Employee> employeeList;
 

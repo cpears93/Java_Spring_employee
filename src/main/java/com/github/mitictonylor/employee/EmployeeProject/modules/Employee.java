@@ -93,4 +93,7 @@ public class Employee {
     public void setEmployeeNumber(int employeeNumber) {
         this.employeeNumber = employeeNumber;
     }
+    public void addProject(Project project){
+        this.projectList.add(project);
+    }
 }

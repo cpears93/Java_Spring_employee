@@ -18,6 +18,20 @@ public class Project {
     @Column
     private int duration;
 
+    @ManyToMany
+    @JoinTable(
+            name = "employees_projects",
+            joinColumns = {@JoinColumn(
+                    name = "project_id",
+                    nullable = false,
+                    updatable = false
+            )},
+            inverseJoinColumns = {@JoinColumn(
+                    name = "employee_id",
+                    nullable = false,
+                    updatable = false
+            )}
+    )
     private List<Employee> employeeList;
 
     public Project(String name, int duration) {

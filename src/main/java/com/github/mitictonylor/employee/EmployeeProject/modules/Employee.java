@@ -25,6 +25,21 @@ public class Employee {
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
 
+    @ManyToMany
+    @JoinTable(
+            name = "employees_projects",
+            joinColumns = {
+                    @JoinColumn( name = "employee_id",
+                    nullable = false,
+                    updatable = false)
+            },
+            inverseJoinColumns = { @JoinColumn(
+                    name = "project_id",
+                    nullable = false,
+                    updatable = false
+            )}
+    )
+
     private List<Project> projectList;
 
 

@@ -1,6 +1,8 @@
 package com.github.mitictonylor.employee.EmployeeProject.modules;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name ="employees")
@@ -23,12 +25,15 @@ public class Employee {
     @JoinColumn(name = "department_id", nullable = false)
     private Department department;
 
+    private List<Project> projectList;
+
 
     public Employee(String firstName, String lastName, int employeeNumber, Department department) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.employeeNumber = employeeNumber;
         this.department = department;
+        this.projectList = new ArrayList<Project>();
     }
 
     public Employee() {

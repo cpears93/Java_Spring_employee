@@ -34,9 +34,12 @@ class EmployeeProjectApplicationTests {
 		projectRepository.save(project);
 		Employee employee = new Employee("Christopher", "Pearson",1,department);
 		Employee employee1 = new Employee("Antonio", "Lorusso",2, department);
+		Employee employee2 = new Employee("William", "Neeson",3, department);
 		employee.addProject(project);
 		employee1.addProject(project);
+		employee2.addProject(project);
 		employeeRepository.save(employee);
 		employeeRepository.save(employee1);
+		employeeRepository.save(employee2);
 	}
 }
